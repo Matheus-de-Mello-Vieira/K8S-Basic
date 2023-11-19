@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpaca-prod
+  labels:
+    ver: "1"
+    app: alpaca
+    env: prod
+  annotations:
+    author: matheus
+spec:
+  containers:
+    - name: kuard
+      image: gcr.io/kuar-demo/kuard-amd64:blue
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 8080
