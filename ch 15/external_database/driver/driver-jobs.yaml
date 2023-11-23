@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: test
+  name: driver
+  labels:
+    side: driver
+spec:
+  template:
+      spec:
+        containers:
+          - name: driver
+            image: driver
+            imagePullPolicy: Never
+        restartPolicy: Never
+
+---
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: production
+  name: driver
+  labels:
+    side: driver
+spec:
+  template:
+      spec:
+        containers:
+          - name: driver
+            image: driver
+            imagePullPolicy: Never
+        restartPolicy: Never
