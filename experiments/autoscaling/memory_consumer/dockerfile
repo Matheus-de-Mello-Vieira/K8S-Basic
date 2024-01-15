@@ -1,0 +1,7 @@
+from python
+
+copy . .
+
+run pip install flask
+
+cmd python python.py
