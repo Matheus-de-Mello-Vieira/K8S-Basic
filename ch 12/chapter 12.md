@@ -49,7 +49,7 @@ sh queue/queue_producer.sh
 
 Start consumers
 ```bash
-sh queue/job-consumers.yaml
+kubectl apply -f queue/job-consumers.yaml
 ```
 
 # CRON

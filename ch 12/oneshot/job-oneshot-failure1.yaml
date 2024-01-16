@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: oneshot
+  name: oneshot-failure1
 spec:
   template:
     spec:
@@ -13,5 +13,5 @@ spec:
           - "--keygen-enable"
           - "--keygen-exit-on-complete"
           - "--keygen-exit-code=1"
-          - "--keygen-num-to-gen=3"
+          - "--keygen-num-to-gen=10"
       restartPolicy: OnFailure
